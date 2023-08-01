@@ -1,0 +1,43 @@
+$downBar-index: 100;
+$topBar-index: 101;
+$minigame-index: 200;
+$popout-notice-index:102;
+$popout-index: 900;
+$popout-page-index: 901;
+$message-wrap-index: 1100;
+$message-index: 1101;
+// $game-iframe-index: 1000;
+$game-iframe-home-index: 1001;
+$dist-iframe-index: 800;
+$loading-index: 910;
+$main-lobby-index: 10000;
+$scroll-index: 100000;
+$primary: white;
+$secondary: #5f83a3;
+$title: #316da1;
+$light: #d8d8d8;
+$text-primary: #fff;
+$text-secondary: #091837;
+$border-primary: #686b7e;
+$modal-key: #28dcffd9;
+$modal-focus-key: #00ffc8d9;
+$coin-color: #ffe646d9;
+$message-content: #28dcff;
+$input: #646d80;
+$mainBg: #fff;
+$downBar-height: 3.5rem;
+$topBar-height: 6.5rem;
+$notLogin-topBar-height: 3.5rem; //原本是4.5
+$safari-main-height: calc(
+  (var(--vh, 1vh) * 100) - $topBar-height - $downBar-height
+);
+// $secondary
+$breakpoints-up: (
+  "3xl": "1800px",
+  "xxl": "1400px",
+  "xl": "1200px",
+  "lg": "992px",
+  "md": "768px",
+  "sm": "576px",
+  "xs": "250px"
+);

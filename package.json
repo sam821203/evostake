@@ -1,0 +1,90 @@
+{
+  "name": "hash-lobby-phil",
+  "version": "1.2.11",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build:dev": "vue-cli-service build --mode development",
+    "build:prod": "vue-cli-service build --mode production",
+    "build:test": "vue-cli-service build --mode test",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@chenfengyuan/vue-countdown": "^2.1.0",
+    "@element-plus/icons-vue": "^2.0.10",
+    "@liripeng/vue-audio-player": "^1.5.0",
+    "@vue/cli-plugin-pwa": "^5.0.8",
+    "@vueuse/components": "^9.13.0",
+    "@vueuse/core": "^9.13.0",
+    "axios": "^1.3.1",
+    "compression-webpack-plugin": "^10.0.0",
+    "core-js": "^3.8.3",
+    "current-device": "^0.10.2",
+    "element-plus": "^2.2.30",
+    "event-source-polyfill": "^1.0.31",
+    "gsap": "^3.11.4",
+    "i18n": "^0.15.1",
+    "js-cookie": "^3.0.1",
+    "mitt": "^3.0.0",
+    "moment": "^2.29.4",
+    "moment-timezone": "^0.5.40",
+    "pinia": "^2.0.30",
+    "pixi-spine": "^3.0.16",
+    "pixi.js": "^6.4.2",
+    "qrcode.vue": "^3.3.3",
+    "register-service-worker": "^1.7.2",
+    "sse.js": "^0.6.1",
+    "swiper": "^9.0.3",
+    "terser-webpack-plugin": "^5.3.7",
+    "vee-validate": "^4.7.3",
+    "vue-clipboard3": "^2.0.0",
+    "vue-i18n": "^9.2.2",
+    "vue-router": "^4.0.3",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "image-webpack-loader": "^8.1.0",
+    "node-sass": "^8.0.0",
+    "prettier": "^2.4.1",
+    "sass": "^1.58.0",
+    "sass-loader": "^13.2.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "parser": "@babel/eslint-parser"
+    },
+    "rules": {
+      "vue/multi-word-component-names": 0
+    },
+    "globals": {
+      "defineProps": "readonly",
+      "defineEmits": "readonly",
+      "defineExpose": "readonly"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}

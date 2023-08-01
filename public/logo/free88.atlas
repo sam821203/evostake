@@ -1,0 +1,76 @@
+
+free88.png
+size: 896,92
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+88_00
+  rotate: true
+  xy: 2, 2
+  size: 88, 87
+  orig: 88, 87
+  offset: 0, 0
+  index: -1
+88_01
+  rotate: true
+  xy: 91, 2
+  size: 88, 87
+  orig: 88, 87
+  offset: 0, 0
+  index: -1
+88_02
+  rotate: true
+  xy: 180, 2
+  size: 88, 87
+  orig: 88, 87
+  offset: 0, 0
+  index: -1
+88_03
+  rotate: true
+  xy: 269, 2
+  size: 88, 87
+  orig: 88, 87
+  offset: 0, 0
+  index: -1
+88_04
+  rotate: true
+  xy: 358, 2
+  size: 88, 87
+  orig: 88, 87
+  offset: 0, 0
+  index: -1
+88_05
+  rotate: true
+  xy: 447, 2
+  size: 88, 87
+  orig: 88, 87
+  offset: 0, 0
+  index: -1
+88_06
+  rotate: true
+  xy: 536, 2
+  size: 88, 87
+  orig: 88, 87
+  offset: 0, 0
+  index: -1
+88_07
+  rotate: true
+  xy: 625, 2
+  size: 88, 87
+  orig: 88, 87
+  offset: 0, 0
+  index: -1
+88_08
+  rotate: true
+  xy: 714, 2
+  size: 88, 87
+  orig: 88, 87
+  offset: 0, 0
+  index: -1
+88_09
+  rotate: false
+  xy: 803, 3
+  size: 88, 87
+  orig: 88, 87
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,27 @@
+
+box.png
+size: 472,304
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+SHIN
+  rotate: false
+  xy: 301, 72
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+box
+  rotate: false
+  xy: 301, 138
+  size: 167, 164
+  orig: 167, 164
+  offset: 0, 0
+  index: -1
+box_light
+  rotate: false
+  xy: 2, 2
+  size: 297, 300
+  orig: 297, 300
+  offset: 0, 0
+  index: -1

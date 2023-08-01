@@ -1,0 +1,30 @@
+@mixin input {
+  padding: 0 10px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  border: 3px solid $input;
+  outline: 0;
+  color: #000;
+  &::placeholder {
+    color: $input;
+    font-size: 0.9rem;
+  }
+  &:disabled {
+    background: #e8e8e8;
+  }
+
+  @content;
+}
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape {
+  @media (max-width: 1199px) and (orientation: landscape) {
+    @content;
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="chat" style="width: 100%;height: 100%;max-width: 470px;"></div>
+    <script>
+        // 舊版要搜尋 src="https://rivjs.com/chat?t=d0bea2b6"，把irfame位址改變
+        // 以下是新版
+        // const domain =  "lucky888-stg.d8.run" //UAT :     
+        const domain = "evostake.d8.run" //Prod
+        let script = document.createElement('script');
+        script.src = "https://" + domain + "/dist/js/widget.js";
+        script.onload = function () {
+            const url = new URL(window.location.href);
+            var userIdentity = "0000-1111-2222-3333";
+            if (url.searchParams.get("userIdentity")) {
+                userIdentity = url.searchParams.get("userIdentity");
+            }
+            /*
+                userIdentity 是一個測試用的使用者身分，用來判斷使用者身分的唯一值
+                這個值必須和之後聊天室向你們後端打API取得個人資料時的身分值相同
+            */
+
+            d8Chat.init("#chat", userIdentity, {
+                domain: domain,
+                showMenu: true
+            });
+        };
+        document.head.appendChild(script);
+    </script>
+
+    <!-- <script src="https://chat.d8.run/dist/js/widget.js"></script>
+    <script>
+        var userIdentity = "0000-1111-2222-3333";
+        const url = new URL(window.location.href);
+        if (url.searchParams.get("userIdentity")) {
+            userIdentity = url.searchParams.get("userIdentity");
+        }
+
+
+        /*
+            userIdentity 是一個測試用的使用者身分，用來判斷使用者身分的唯一值
+            這個值必須和之後聊天室向你們後端打API取得個人資料時的身分值相同
+        */
+        d8Chat.init("#chat", userIdentity);
+    </script> -->
+</body>
+
+</html>
