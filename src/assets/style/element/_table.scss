@@ -1,0 +1,69 @@
+.table {
+  position: relative;
+}
+
+.el-table {
+  margin-bottom: 25px;
+  --el-table-border-color: #535353;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: initial;
+  position: absolute;
+  .el-table__header {
+    thead tr th {
+      background: $light !important;
+      color: $dark;
+      border-right: 1px solid $dark !important;
+      padding: 5px 0;
+      tr th {
+        font-weight: bold;
+      }
+      &:last-child {
+        border-right: none !important;
+      }
+    }
+    th.el-table__cell > .cell {
+      white-space: pre-wrap;
+    }
+  }
+  .el-table__row {
+    --el-table-tr-bg-color: $light;
+    color: $dark;
+    td {
+      border: 1px solid #535353;
+      border-top: none;
+      border-left: none;
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+    .el-button {
+      margin: 0 !important;
+    }
+    &:hover {
+      --el-table-row-hover-bg-color: initial;
+      background: $table-hover;
+      color: black;
+      a {
+        color: black;
+      }
+    }
+    &.hover-row {
+      --el-table-row-hover-bg-color: initial;
+      background: $table-hover;
+      color: black;
+      a {
+        color: black;
+      }
+    }
+  }
+  .el-table__footer {
+    .el-table__cell {
+      border-top: 1px solid white;
+      background: white !important;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

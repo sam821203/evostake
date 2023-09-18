@@ -1,0 +1,3 @@
+VUE_APP_BACKENDAPI=https://api.evostake00.com
+VUE_APP_TRONSCAN=https://shasta.tronscan.org/#/block/
+VUE_APP_LINK=https://evostake00.com

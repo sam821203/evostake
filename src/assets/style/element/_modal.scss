@@ -1,0 +1,92 @@
+.el-dialog {
+  background: $light !important;
+  border-radius: 5px !important;
+  max-height: 98vh;
+  margin: 0 !important;
+  position: fixed !important;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow-x: hidden;
+  @include breakpoint-up('xl') {
+    overflow-y: scroll;
+    max-height: 90vh;
+  }
+  h2 {
+    color: $secondary;
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $info;
+  }
+  .el-dialog__header {
+    margin: 0 !important;
+    @include breakpoint-up('sm') {
+      padding: 10px !important;
+    }
+    .el-dialog__headerbtn {
+      top: -10px;
+      right: -10px;
+    }
+    .el-icon {
+      border-radius: 50%;
+      padding: 5px;
+      color: $dark;
+      border: 2px solid $dark;
+      font-size: 30px;
+    }
+  }
+  .el-dialog__body {
+    padding: 10px 20px 20px !important;
+    p {
+      color: black;
+    }
+    @include breakpoint-up('sm') {
+      padding: 10px !important;
+    }
+  }
+  .dialog-footer {
+    button:first-child {
+      margin-right: 10px;
+    }
+    display: flex;
+    justify-content: center;
+  }
+  .el-form-item__label {
+    color: black;
+    @include breakpoint-up('xl') {
+      justify-content: flex-start;
+    }
+    @include breakpoint-up('sm') {
+      font-size: 16px !important;
+    }
+  }
+  .el-col {
+    margin-bottom: 15px;
+  }
+  .el-input {
+    width: 90%;
+    @include breakpoint-up('xl') {
+      width: 100%;
+    }
+  }
+  .btnGroup {
+    display: flex;
+    justify-content: center;
+  }
+  .el-table .el-table__header {
+    thead tr th {
+      background: $secondary !important;
+      color: white;
+      font-weight: 400;
+    }
+  }
+}
+
+.el-picker__popper {
+  @include breakpoint-up('sm') {
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,32 @@
+.el-popover {
+  font-family: 'Noto Sans TC', Avenir, Helvetica, Arial, sans-serif;
+  background: #747171 !important;
+  border: none !important;
+  margin-right: 10px !important;
+  max-width: 600px;
+  ul li {
+    margin-bottom: 5px;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  .formula {
+    span {
+      &:first-child {
+        display: inline-block;
+        min-width: 100px;
+      }
+      &:nth-child(2) {
+        margin: 0 10px;
+      }
+    }
+  }
+  .el-popper__arrow::before {
+    background: #747171 !important;
+    border: none !important;
+  }
+}

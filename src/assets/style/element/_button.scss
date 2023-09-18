@@ -1,0 +1,88 @@
+@mixin button($height, $width, $color) {
+  border: none !important;
+  border-radius: 5px !important;
+  color: white;
+  background: $color !important;
+  font-weight: bold;
+  cursor: pointer;
+  height: $height !important;
+  min-width: $width;
+  width: fit-content !important;
+  padding: 0 10px;
+  font-size: 16px;
+  margin: 0 5px 0 0 !important;
+  @include breakpoint-up('sm') {
+    margin: 0 5px 5px 0 !important;
+  }
+}
+.el-button--danger{
+  @include button(40px, 110px, $danger);
+  @include breakpoint-up('sm') {
+    @include button(30px, 110px, $danger);
+    width: 100%;
+    // 顏色默認為電腦版
+    &.default {
+      @include button(30px, 110px, $danger);
+    }
+  }
+}
+.el-button--primary {
+  @include button(40px, 110px, $primary);
+  @include breakpoint-up('sm') {
+    @include button(30px, 110px, $info);
+    width: 100%;
+    // 顏色默認為電腦版
+    &.default {
+      @include button(30px, 110px, $primary);
+    }
+  }
+  &.danger {
+    background: #cb2525 !important;
+  }
+
+  //存款
+  &.in {
+    @include button(40px, 105px, #c89800);
+    @include breakpoint-up('sm') {
+      @include button(30px, 110px, #c89800);
+    }
+  }
+
+  //洗分
+  &.out {
+    @include button(40px, 105px, #ff4b4b);
+    @include breakpoint-up('sm') {
+      @include button(30px, 110px, #ff4b4b);
+    }
+  }
+
+  //紅利
+  &.bonus {
+    @include button(40px, 105px, #43cf7c);
+    @include breakpoint-up('sm') {
+      @include button(30px, 110px, #43cf7c);
+    }
+  }
+}
+.el-button--info {
+  @include button(40px, 110px, $secondary);
+  border-radius: 50px !important;
+  border: 3px solid white !important;
+  max-width: initial !important;
+  padding: 0 10px;
+}
+.el-button--warning {
+  @include button(40px, 110px, $disabled);
+  color: #ffffff;
+  cursor: not-allowed;
+  @include breakpoint-up('sm') {
+    @include button(30px, 110px, $disabled);
+    width: 100%;
+  }
+}
+
+.el-button {
+  &.target {
+    opacity: 0.6;
+  }
+}

@@ -1,0 +1,36 @@
+.el-select {
+  margin: 0 5px 0 0;
+  @include breakpoint-up('sm') {
+    margin: 0 5px 5px 0;
+  }
+  .el-input {
+    margin: 0;
+  }
+  .el-input__wrapper {
+    width: 160px;
+    background: white;
+    @include breakpoint-up('sm') {
+      width: auto;
+      width: 110px;
+    }
+    .el-input__inner {
+      color: black;
+      text-align: center;
+      @include breakpoint-up('sm') {
+        color: #606266;
+      }
+      &::placeholder {
+        color: black;
+        @include breakpoint-up('sm') {
+          color: #606266;
+        }
+      }
+    }
+  }
+  .is-disabled {
+    background: $disabled;
+  }
+}
+.el-select-dropdown__wrap {
+  max-height: 490px !important;
+}

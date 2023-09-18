@@ -1,0 +1,36 @@
+.el-input {
+  margin: 0 5px 0 0;
+  @include breakpoint-up('sm') {
+    margin: 0 5px 5px 0;
+  }
+  .el-input__inner {
+    font-weight: 600;
+  }
+}
+
+.el-input__wrapper {
+  border: 1px solid $dark;
+  height: 40px;
+  @include breakpoint-up('sm') {
+    height: 30px;
+  }
+}
+
+.is-disabled {
+  .el-input__wrapper,
+  .el-textarea__inner {
+    color: white !important;
+    background: $disabled !important;
+  }
+  .el-input__inner {
+    color: white !important;
+  }
+}
+
+.el-radio__label {
+  color: black;
+}
+
+.el-input__prefix {
+  display: none;
+}

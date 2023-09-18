@@ -1,33 +1,22 @@
-import { useLanguage } from "./languageStore";
-import { useMail } from "./mailStore";
-import { useModal } from "./modalStore";
-import { useMessage } from "./msgStore";
-import { useSsevent } from "./sseventStore";
-import { useAuth } from "./auth";
-import { useGame } from "./game";
-// import { cloneDeep } from "lodash";
-import { useDeposit } from "./depositStore";
-import { useAnnouncement } from "./announcementStore";
-import { useMinigame } from "./minigameStore";
-import { useSounds } from "./soundsStore";
+import { createPinia } from 'pinia'
 
-export const useStore = () => {
+import useLoginData from '@/store/loginDataStore'
+import useTreeData from '@/store/treeDataStroe'
+import useValidator from '@/store/validatorStore'
+import useJumpPlayer from '@/store/jumpPlayerStore'
+import useMsg from '@/store/msgStore'
+import useGameTypeStore from '@/store/gameTypeStore'
+import usefastgivenbonus from '@/store/fastgivenbonus'
+export default () => {
   return {
-    useLanguage,
-    useMail,
-    useModal,
-    useMessage,
-    useSsevent,
-    useAuth,
-    useGame,
-    useDeposit,
-    useAnnouncement,
-    useMinigame,
-    useSounds,
-  };
-};
+    loginStore: useLoginData(),
+    treeStore: useTreeData(),
+    validatorStore: useValidator(),
+    jumpPlayerStore: useJumpPlayer(),
+    msgStore: useMsg(),
+    gameTypeStore: useGameTypeStore(),
+    fastgivenbonus: usefastgivenbonus()
+  }
+}
 
-// export const resetPinia = (state) => {
-//   const initState = cloneDeep(state);
-//   return initState;
-// };
+export const pinia = createPinia()

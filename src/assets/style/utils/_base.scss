@@ -1,0 +1,304 @@
+// 各區塊
+section {
+  border-radius: 5px;
+  box-shadow: 0 1px 3px $secondary;
+  padding: 10px;
+  margin-bottom: 10px;
+  @include breakpoint-up('sm') {
+    background: initial;
+    box-shadow: initial;
+    padding: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  h2 {
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid $info;
+    display: flex;
+    align-items: center;
+    color: $secondary;
+    .title {
+      margin-right: 5px;
+    }
+    @include breakpoint-up('sm') {
+      border-bottom: none;
+      padding: 0;
+      color: black;
+      font-weight: 600;
+      font-size: 20px;
+      margin: 0;
+    }
+  }
+}
+
+select {
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #312f3c;
+  padding: 0 20px;
+  margin: 0px 5px 10px;
+  border-radius: 5px;
+}
+
+// 概括總計 + 詳細報表
+.reportGroup {
+  position: relative;
+  @include breakpoint-up('sm') {
+    padding: 0 12px 12px;
+    background: #f9f1cc;
+    margin: 0 -12px;
+  }
+  section {
+    &:first-child {
+      h2 {
+        padding-top: 4px;
+      }
+    }
+  }
+}
+
+// 搜尋區塊
+.searchGroup {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  @include breakpoint-up('sm') {
+    margin: 0;
+  }
+  .el-input {
+    width: 200px;
+    @include breakpoint-up('sm') {
+      width: auto;
+    }
+  }
+
+  .el-select .el-input {
+    width: auto;
+  }
+}
+
+// 手機卡片
+.mobileCard {
+  background: white;
+  box-shadow: 2px 5px 6px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  margin: 15px 0;
+  z-index: 210;
+  &.open {
+    height: auto;
+    width: 95%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .header {
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    .title {
+      margin: 0;
+      font-size: 20px;
+      color: black;
+    }
+    .icon {
+      width: 80px;
+      height: 30px;
+      background: $info;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      span {
+        width: 10px;
+        height: 10px;
+        background: white;
+        margin-right: 5px;
+        border-radius: 50%;
+      }
+      &.closure {
+        background: $primary;
+      }
+    }
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 10px;
+    li {
+      width: 50%;
+      border-bottom: 1px solid #c8bfbf;
+      padding: 5px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .el-button {
+        margin: 0 !important;
+      }
+      &.btn {
+        align-items: center;
+      }
+      &.title {
+        width: 100%;
+        margin-top: 20px;
+        color: $info;
+        font-weight: 600;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
+    p,
+    a {
+      color: black;
+      font-size: 18px;
+      @include breakpoint-up('sm') {
+        font-size: 16px;
+        word-wrap: break-word;
+        width: calc(100vw - 20px);
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+// 彈窗背景陰影
+.overlay {
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+// 電腦版分頁排版
+.pag {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+
+// 連結帶入底線
+.link {
+  text-decoration: revert;
+}
+
+// 跳轉路由
+.jumpLink {
+  color: $secondary !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+// 原始表格樣式
+.originTable {
+  width: 100%;
+  // border-radius: 5px 5px 0 0;
+  border: 1px solid $dark;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: $dark;
+  thead {
+    background: $light;
+    tr th {
+      padding: 10px;
+      font-weight: bold;
+      font-size: 14px;
+      border-right: 1px solid $dark;
+      border-bottom: 1px solid $dark;
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+  tbody {
+    .noData {
+      color: #909399;
+      font-size: 14px;
+      height: 60px;
+
+      td {
+        border: none;
+      }
+    }
+    &.detailed {
+      &:hover {
+        background: $table-hover;
+        tr td {
+          color: black;
+        }
+      }
+    }
+    td {
+      padding: 10px;
+      border: 1px solid $dark;
+      border-top: none;
+      border-left: none;
+      text-align: center;
+      font-size: 14px;
+      // &:last-of-type {
+      //   border-right: none;
+      // }
+      &.nodata {
+        padding: 10px;
+        border-bottom: 2px solid $dark !important;
+      }
+    }
+  }
+}
+
+// 目前輸入分數、等值
+.quota {
+  position: relative;
+  padding-bottom: 15px;
+  &.player {
+    padding-bottom: 60px;
+  }
+  &.lastQuota {
+    padding-bottom: 15px;
+  }
+  .quotaText {
+    position: absolute;
+    color: $info;
+    font-size: 14px !important;
+    &.init_quota {
+      bottom: -30px;
+    }
+    &.temp_quota {
+      bottom: -38px;
+    }
+    &.lastQuota {
+      bottom: -80px;
+    }
+  }
+}
+
+// loading
+.fa-spinner {
+  margin-left: 5px;
+  animation: rotate 3s infinite linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// 備註欄位手機板樣式
+.memo {
+  @include breakpoint-up('xl') {
+    display: block;
+  }
+}

@@ -1,0 +1,8 @@
+.el-switch {
+  &.is-checked {
+    .el-switch__core {
+      background-color: #04d00b !important;
+      border: 1px solid white;
+    }
+  }
+}

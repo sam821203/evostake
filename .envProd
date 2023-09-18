@@ -1,0 +1,9 @@
+菲律賓
+VUE_APP_BACKENDAPI=https://api.lucky888.gg
+VUE_APP_TRONSCAN=https://tronscan.org/#/block/
+VUE_APP_LINK=https://lucky888.gg
+
+巴西
+VUE_APP_BACKENDAPI=https://api.evostake.com
+VUE_APP_TRONSCAN=https://tronscan.org/#/block/
+VUE_APP_LINK=https://evostake.com
